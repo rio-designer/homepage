@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rio's Portfolio</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <style>
+      :root {
+        --primary-color: #e6e6fa;
+        --secondary-color: #9370db;
+        --text-color: #4b0082;
+      }
+
+      body {
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        color: var(--text-color);
+      }
+
+      .navbar {
+        background-color: var(--primary-color) !important;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .hero-section {
+        height: 335px;
+        background-image: url("/public/hero-image.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+      }
+
+      .hero-text {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translateY(-50%);
+        font-size: 6rem;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .profile-section {
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+      }
+
+      .profile-image {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+      }
+
+      .content-section {
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        margin-bottom: 30px;
+      }
+
+      .section-title {
+        color: var(--secondary-color);
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+
+      .skill-tag {
+        background-color: var(--primary-color);
+        color: var(--text-color);
+        padding: 5px 15px;
+        border-radius: 20px;
+        margin: 5px;
+        display: inline-block;
+      }
+
+      footer {
+        background-color: var(--primary-color);
+        padding: 20px 0;
+        margin-top: 50px;
+      }
+
+      @media (max-width: 768px) {
+        .hero-text {
+          font-size: 4rem;
+          left: 5%;
+        }
+
+        .profile-section {
+          position: static !important;
+          margin-bottom: 30px;
+        }
+      }
+
+      /* フォントサイズの調整 */
+      .navbar-brand {
+        font-size: 1.2rem;
+      }
+
+      .nav-link {
+        font-size: 0.95rem;
+      }
+
+      .hero-text {
+        font-size: 3.5rem; /* 5rem から縮小 */
+      }
+
+      .section-title {
+        font-size: 1.5rem; /* h2 のサイズ調整 */
+      }
+
+      h3.h5 {
+        font-size: 1.1rem; /* h3 のサイズ調整 */
+      }
+
+      p {
+        font-size: 0.95rem; /* 本文のサイズ調整 */
+      }
+
+      .profile-section h2 {
+        font-size: 1.3rem; /* プロフィール名のサイズ調整 */
+      }
+
+      .skill-tag {
+        font-size: 0.85rem; /* スキルタグのサイズ調整 */
+      }
+
+      .form-label {
+        font-size: 0.95rem; /* フォームラベルのサイズ調整 */
+      }
+
+      footer p {
+        font-size: 0.9rem; /* フッターのサイズ調整 */
+      }
+
+      .lead {
+        font-size: 1.1rem; /* リード文のサイズ調整 */
+      }
+
+      /* レスポンシブ対応の調整 */
+      @media (max-width: 768px) {
+        .hero-text {
+          font-size: 2.5rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero-text {
+          font-size: 2rem;
+        }
+
+        .section-title {
+          font-size: 1.3rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Rio's Portfolio</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#profile">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#works">Works</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section"></section>
+
+    <!-- Main Content -->
+    <div class="container py-5">
+      <div class="row">
+        <!-- Profile Section (Sticky) -->
+        <div class="col-md-4">
+          <div class="profile-section" style="position: sticky; top: 100px">
+            <div class="text-center">
+              <img
+                src="/public/profile-icon.png"
+                alt="Profile"
+                class="profile-image" />
+
+              <h2>Rio</h2>
+            </div>
+            <div class="mb-4">
+              <h3 class="h5">スキル</h3>
+              <div>
+                <span class="skill-tag">HTML/CSS</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">UI/UX</span>
+                <span class="skill-tag">Webデザイン</span>
+              </div>
+            </div>
+            <div>
+              <h3 class="h5">経歴</h3>
+              <ul class="list-unstyled">
+                <li class="mb-2">2020 - 現在: フリーランスデザイナー</li>
+                <li class="mb-2">2018 - 2020: Webデザイン会社</li>
+                <li>2018: デザイン専門学校卒業</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Content Sections -->
+        <div class="col-md-8">
+          <!-- Services Section -->
+          <section id="services" class="content-section">
+            <h2 class="section-title">自己紹介</h2>
+            <div class="row">
+              <div class="col-12 mb-4">
+                <p class="lead mb-4">
+                  初めまして！この度は閲覧頂きありがとうございます( ´ｰ` )❤︎
+                </p>
+                <p class="mb-4">
+                  始めたばかりなので沢山描かせて頂ければと思います！
+                  ご依頼者様に満足していただけるよう精一杯描かせて頂きます！
+                </p>
+                <div class="alert alert-info mb-4">
+                  <p class="mb-2">
+                    ただトラブル回避の為、ご購入前にDMまたはお見積もりください。
+                  </p>
+                  <p class="mb-0">
+                    出来るだけ早くお届けできるよう描かせて頂きますのでよろしくお願いします\(
+                    ¨̮ )/
+                  </p>
+                </div>
+                <div class="bg-light p-4 rounded">
+                  <h3 class="h5 mb-3">☆得意なもの</h3>
+                  <p class="mb-2">女の子・女性</p>
+                  <p class="mb-3">
+                    日常からファンタジーイラストを描くことが好きです！
+                  </p>
+                  <p class="mb-0">
+                    少しでもいいなと思って下さったら♡お待ちしております( ´ｰ`
+                    )❤︎！
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Works Section -->
+          <section id="works" class="content-section">
+            <h2 class="section-title">実績</h2>
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <img
+                  src="/public/profile-icon.png"
+                  alt="Work 1"
+                  class="img-fluid rounded" />
+                <h3 class="h5 mt-3">企業サイトデザイン</h3>
+              </div>
+              <div class="col-md-6 mb-4">
+                <img
+                  src="/public/profile-icon.png"
+                  alt="Work 2"
+                  class="img-fluid rounded" />
+                <h3 class="h5 mt-3">ECサイトデザイン</h3>
+              </div>
+            </div>
+          </section>
+
+          <section id="works" class="content-section">
+            <h2 class="section-title">出品サービス (2件)</h2>
+            <div class="row mb-5">
+              <h3 class="h5 mb-4">イラスト</h3>
+              <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                  <div class="position-relative">
+                    <img
+                      src="/public/profile-icon.png"
+                      alt="SNSアイコン"
+                      class="img-fluid rounded-top" />
+                    <button
+                      class="btn btn-light position-absolute top-0 end-0 m-2 rounded-circle p-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-heart"
+                        viewBox="0 0 16 16">
+                        <path
+                          d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="card-body">
+                    <h4 class="h6">低コストでかわいいSNSアイコン描きます</h4>
+                    <div class="d-flex align-items-center mb-2">
+                      <span class="text-warning me-1">★</span>
+                      <span class="me-2">5.0</span>
+                      <span class="text-muted">実績1件</span>
+                    </div>
+                    <span class="badge bg-info">購入可能</span>
+                    <p class="h5 mt-3 text-end mb-0">3,000円</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                  <div class="position-relative">
+                    <img
+                      src="/public/profile-icon.png"
+                      alt="イラスト作成"
+                      class="img-fluid rounded-top" />
+                    <button
+                      class="btn btn-light position-absolute top-0 end-0 m-2 rounded-circle p-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-heart"
+                        viewBox="0 0 16 16">
+                        <path
+                          d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="card-body">
+                    <h4 class="h6">
+                      イラスト作成・1枚絵・キャラ作成なんでもします
+                    </h4>
+                    <div class="d-flex align-items-center mb-2">
+                      <span class="text-warning me-1">★</span>
+                      <span class="me-2">5.0</span>
+                      <span class="text-muted">実績1件</span>
+                    </div>
+                    <span class="badge bg-danger">満枠対応中</span>
+                    <p class="h5 mt-3 text-end mb-0">7,000円</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- デザインセクションを空のカードで追加 -->
+            <div class="row">
+              <h3 class="h5 mb-4">デザイン</h3>
+              <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                  <div class="position-relative">
+                    <img
+                      src="/public/profile-icon.png"
+                      alt="準備中"
+                      class="img-fluid rounded-top" />
+                  </div>
+                  <div class="card-body">
+                    <h4 class="h6">準備中</h4>
+                    <p class="text-muted mb-0">Coming soon...</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <style>
+            .card {
+              transition: transform 0.2s;
+              border: 1px solid rgba(0, 0, 0, 0.1);
+            }
+
+            .card:hover {
+              transform: translateY(-5px);
+              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            }
+
+            .badge {
+              font-weight: normal;
+              padding: 0.5em 1em;
+            }
+          </style>
+
+          <section class="content-section">
+            <h2 class="section-title mb-4">ポートフォリオ</h2>
+
+            <!-- イラストセクション -->
+            <div class="mb-5">
+              <div
+                class="d-flex justify-content-between align-items-center mb-4">
+                <h3 class="h5 mb-0">イラスト</h3>
+                <a
+                  href="#"
+                  class="text-decoration-none text-primary"
+                  style="font-size: 0.9rem"
+                  >もっと見る</a
+                >
+              </div>
+
+              <div class="row g-4">
+                <div class="col-md-3 col-6">
+                  <div class="position-relative gallery-item">
+                    <img
+                      src="/public/profile-icon.png"
+                      alt="イラスト作品1"
+                      class="img-fluid rounded shadow-sm w-100"
+                      style="object-fit: cover; height: 250px" />
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="position-relative gallery-item">
+                    <img
+                      src="/public/profile-icon.png"
+                      alt="イラスト作品2"
+                      class="img-fluid rounded shadow-sm w-100"
+                      style="object-fit: cover; height: 250px" />
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="position-relative gallery-item">
+                    <img
+                      src="/public/profile-icon.png"
+                      alt="イラスト作品3"
+                      class="img-fluid rounded shadow-sm w-100"
+                      style="object-fit: cover; height: 250px" />
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="position-relative gallery-item">
+                    <img
+                      src="/public/profile-icon.png"
+                      alt="イラスト作品4"
+                      class="img-fluid rounded shadow-sm w-100"
+                      style="object-fit: cover; height: 250px" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- デザインセクション -->
+            <div>
+              <div
+                class="d-flex justify-content-between align-items-center mb-4">
+                <h3 class="h5 mb-0">デザイン</h3>
+                <a
+                  href="#"
+                  class="text-decoration-none text-primary"
+                  style="font-size: 0.9rem"
+                  >もっと見る</a
+                >
+              </div>
+
+              <div class="row g-4">
+                <div class="col-md-3 col-6">
+                  <div class="position-relative gallery-item">
+                    <img
+                      src="/public/profile-icon.png"
+                      alt="デザイン作品1"
+                      class="img-fluid rounded shadow-sm w-100"
+                      style="object-fit: cover; height: 250px" />
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="position-relative gallery-item">
+                    <img
+                      src="/public/profile-icon.png"
+                      alt="デザイン作品2"
+                      class="img-fluid rounded shadow-sm w-100"
+                      style="object-fit: cover; height: 250px" />
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="position-relative gallery-item">
+                    <img
+                      src="/public/profile-icon.png"
+                      alt="デザイン作品3"
+                      class="img-fluid rounded shadow-sm w-100"
+                      style="object-fit: cover; height: 250px" />
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="position-relative gallery-item">
+                    <img
+                      src="/public/profile-icon.png"
+                      alt="デザイン作品4"
+                      class="img-fluid rounded shadow-sm w-100"
+                      style="object-fit: cover; height: 250px" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <style>
+            .gallery-item {
+              transition: transform 0.3s ease;
+              cursor: pointer;
+            }
+
+            .gallery-item:hover {
+              transform: translateY(-5px);
+            }
+
+            .gallery-item img {
+              transition: opacity 0.3s ease;
+            }
+
+            .gallery-item:hover img {
+              opacity: 0.9;
+            }
+
+            @media (max-width: 768px) {
+              .gallery-item img {
+                height: 150px !important;
+              }
+            }
+          </style>
+
+          <!-- Contact Section -->
+          <section id="contact" class="content-section">
+            <h2 class="section-title">お問い合わせ</h2>
+            <form>
+              <div class="mb-3">
+                <label for="name" class="form-label"
+                  >お名前 <span class="text-danger">*</span></label
+                >
+                <input type="text" class="form-control" id="name" required />
+              </div>
+              <div class="mb-3">
+                <label for="subject" class="form-label"
+                  >件名 <span class="text-danger">*</span></label
+                >
+                <input type="text" class="form-control" id="subject" required />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label"
+                  >メールアドレス <span class="text-danger">*</span></label
+                >
+                <input type="email" class="form-control" id="email" required />
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label"
+                  >お問い合わせ内容 <span class="text-danger">*</span></label
+                >
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="5"
+                  required></textarea>
+              </div>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                style="background-color: var(--secondary-color); border: none">
+                送信
+              </button>
+            </form>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center">
+      <div class="container">
+        <p class="mb-0">&copy; 2024 Rio's Portfolio. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
