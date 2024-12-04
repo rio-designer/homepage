@@ -4,7 +4,7 @@
     --secondary-color: #9370DB;
     --text-color: #4B0082;
     --bg-color-content: #eaf4f4;
-    --bg-color-profile: rgb(253, 249, 255);
+    --bg-color-profile: rgb(239 225 246);
 }
 
 /* Base Styles */
@@ -182,11 +182,26 @@ p {
     z-index: 2000;
 }
 
+/* Modal Content */
 .modal-content {
     position: relative;
     max-width: 90vw;
     max-height: 90vh;
     padding: 20px;
+}
+
+/* Image Title */
+.modal-title {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 0.9rem;
+    text-align: center;
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
 }
 
 .modal-image {
@@ -354,4 +369,151 @@ footer {
     padding: 20px 0;
     margin-top: 50px;
     font-size: 0.9rem;
+}
+
+/* Design Category専用のスタイル */
+.design-category {
+    margin-bottom: 2rem;
+}
+
+.design-category-title {
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    border-left: 3px solid var(--secondary-color);
+}
+
+.design-grid {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 0.5rem 0;
+    /* カスタムスクロールバー */
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) #f0f0f0;
+}
+
+/* Webkit系ブラウザ用のスクロールバーカスタマイズ */
+.design-grid::-webkit-scrollbar {
+    height: 8px;
+}
+
+.design-grid::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 4px;
+}
+
+.design-grid::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    border: 2px solid #f0f0f0;
+}
+
+.design-grid::-webkit-scrollbar-thumb:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Designセクションの画像アイテム */
+.design-grid .portfolio-item {
+    flex: 0 0 auto;
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.design-grid .portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.design-grid .portfolio-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hidden-item {
+    display: none;
+}
+
+.load-more-btn {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 0.5rem 2rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.load-more-btn:hover {
+    background-color: var(--secondary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+
+/* カテゴリーコンテナ */
+.design-category {
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+/* スクロール可能なグリッド */
+.design-grid {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: scroll;
+    padding: 0.5rem 0 1rem 0;
+    /* スクロールバーを常に表示 */
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: #E6E6FA #f8f8ff;
+}
+
+/* Webkit系ブラウザ用のスクロールバーカスタマイズ */
+.design-grid::-webkit-scrollbar {
+    height: 8px;
+    display: block;
+    /* 常に表示 */
+}
+
+.design-grid::-webkit-scrollbar-track {
+    background: #f8f8ff;
+    border-radius: 4px;
+}
+
+.design-grid::-webkit-scrollbar-thumb {
+    background-color: #E6E6FA;
+    border-radius: 4px;
+}
+
+.design-grid::-webkit-scrollbar-thumb:hover {
+    background-color: #9370DB;
+}
+
+/* グラデーションの固定 */
+.design-category::after {
+    content: "";
+    position: fixed;
+    /* absoluteからfixedに変更 */
+    right: 0;
+    width: 100px;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(to right, transparent, #f8f8ff 80%);
+    pointer-events: none;
+}
+
+/* スクロールヒント */
+.scroll-hint {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    color: #9370DB;
+    font-size: 0.9rem;
+    z-index: 1;
 }

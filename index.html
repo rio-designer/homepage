@@ -59,20 +59,37 @@
               <h2>Rio</h2>
             </div>
             <div class="mb-4">
-              <h3 class="h5">スキル</h3>
+              <h3 class="h5">得意/好きなこと</h3>
               <div class="skill-tags">
-                <span class="skill-tag">HTML/CSS</span>
-                <span class="skill-tag">JavaScript</span>
-                <span class="skill-tag">UI/UX</span>
-                <span class="skill-tag">Webデザイン</span>
+                <span class="skill-tag">事務処理</span>
+                <span class="skill-tag">財務処理</span>
+                <span class="skill-tag">イラスト制作</span>
+                <span class="skill-tag">デザイン制作</span>
               </div>
+            </div>
+            <div class="mb-4">
+              <h3 class="h5">使えるツール</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">CLIP STUDIO PAINT(4年)</span>
+                <span class="skill-tag">Canva</span>
+                <span class="skill-tag">Illustrator(3ヶ月・今後勉強予定)</span>
+              </div>
+            </div>
+            <div class="mb-4">
+              <h3 class="h5">その他</h3>
+              <ul class="list-unstyled">
+                <li>1日の稼働時間: 8h</li>
+                <li>返信速度: 12時間以内</li>
+              </ul>
             </div>
             <div>
               <h3 class="h5">経歴</h3>
               <ul class="list-unstyled career-list">
-                <li>2020 - 現在: フリーランスデザイナー</li>
-                <li>2018 - 2020: Webデザイン会社</li>
-                <li>2018: デザイン専門学校卒業</li>
+                <li>XXXX - XXXX: 整体経験</li>
+                <li>XXXX - XXXX: 財務経験</li>
+                <li>XXXX - XXXX: 営業経験</li>
+                <li>XXXX - XXXX: イラスト経験</li>
+                <li>XXXX - XXXX: デザイン経験</li>
               </ul>
             </div>
           </div>
@@ -97,31 +114,25 @@
             <h2 class="section-title">Profile</h2>
             <div class="row">
               <div class="col-12 mb-4">
-                <p class="lead mb-4">
-                  初めまして！この度は閲覧頂きありがとうございます( ´ｰ` )❤︎
+                <p class="lead mb-4">初めまして！Rio (りお)と申します。</p>
+                <p class="mb-4">
+                  効率的にタスクを完了させることと、お客さんの気持ちに寄り添い最大限喜んでいただくことが好きです。
                 </p>
                 <p class="mb-4">
-                  始めたばかりなので沢山描かせて頂ければと思います！
-                  ご依頼者様に満足していただけるよう精一杯描かせて頂きます！
+                  どんな仕事も責任とこだわりを持ってやり抜きます。
                 </p>
+                <div class="specialty-box mb-4">
+                  <h3 class="h5 mb-3">☆得意なもの</h3>
+                  <p class="mb-2">事務処理 / 財務処理</p>
+                  <p class="mb-2">請求書作成・消込み・Excel/スプレッドシート</p>
+                  <p class="mb-2">イラスト制作 / デザイン制作（チラシなど）</p>
+                </div>
                 <div class="alert alert-info mb-4">
                   <p class="mb-2">
-                    ただトラブル回避の為、ご購入前にDMまたはお見積もりください。
+                    ご依頼の際は、まずはお気軽にご相談ください。
                   </p>
                   <p class="mb-0">
-                    出来るだけ早くお届けできるよう描かせて頂きますのでよろしくお願いします\(
-                    ¨̮ )/
-                  </p>
-                </div>
-                <div class="specialty-box">
-                  <h3 class="h5 mb-3">☆得意なもの</h3>
-                  <p class="mb-2">女の子・女性</p>
-                  <p class="mb-3">
-                    日常からファンタジーイラストを描くことが好きです！
-                  </p>
-                  <p class="mb-0">
-                    少しでもいいなと思って下さったら♡お待ちしております( ´ｰ`
-                    )❤︎！
+                    お客様のご要望に沿えるよう、最善を尽くさせていただきます。
                   </p>
                 </div>
               </div>
@@ -143,144 +154,191 @@
                 class="decoration-image" />
             </div>
             <h2 class="section-title mb-4">Works</h2>
+
+            <!-- Illust Section -->
             <h3 class="h4 mb-4">Illust</h3>
-            <div class="portfolio-grid">
-              <!-- 画像アイテム（例） -->
+            <div class="portfolio-grid" id="illustGrid">
+              <!-- 最初の4枚 -->
               <div class="portfolio-item">
                 <img
                   src="/public/illusts/12.jpg"
-                  alt="作品1"
+                  alt="花弁と女の子"
                   class="portfolio-image" />
               </div>
               <div class="portfolio-item">
                 <img
                   src="/public/illusts/11.jpg"
-                  alt="作品1"
+                  alt="花譜"
                   class="portfolio-image" />
               </div>
               <div class="portfolio-item">
                 <img
                   src="/public/illusts/10.jpg"
-                  alt="作品1"
+                  alt="ずとまよをイメージしたイラスト"
                   class="portfolio-image" />
               </div>
               <div class="portfolio-item">
                 <img
                   src="/public/illusts/9.jpg"
-                  alt="作品1"
+                  alt="デレステ 佐藤心"
                   class="portfolio-image" />
               </div>
-              <div class="portfolio-item">
+              <!-- 残りの画像（初期状態では非表示） -->
+              <div class="portfolio-item hidden-item">
                 <img
                   src="/public/illusts/8.jpg"
-                  alt="作品1"
+                  alt="闇夜を駆けるつよつよJK"
                   class="portfolio-image" />
               </div>
-              <div class="portfolio-item">
+              <div class="portfolio-item hidden-item">
                 <img
                   src="/public/illusts/7.jpg"
-                  alt="作品1"
+                  alt="デレステ 佐藤心"
                   class="portfolio-image" />
               </div>
-              <div class="portfolio-item">
+              <div class="portfolio-item hidden-item">
                 <img
                   src="/public/illusts/6.jpg"
-                  alt="作品1"
+                  alt="オリジナルキャラクター 次郎くん シルファちゃん"
                   class="portfolio-image" />
               </div>
-              <div class="portfolio-item">
+              <div class="portfolio-item hidden-item">
                 <img
                   src="/public/illusts/5.jpg"
-                  alt="作品1"
+                  alt="ペンギンの擬人化"
                   class="portfolio-image" />
               </div>
-              <div class="portfolio-item">
+              <div class="portfolio-item hidden-item">
                 <img
                   src="/public/illusts/4.jpg"
-                  alt="作品1"
+                  alt="ハンバーグとウェイトレス"
                   class="portfolio-image" />
               </div>
-              <div class="portfolio-item">
+              <div class="portfolio-item hidden-item">
                 <img
                   src="/public/illusts/3.jpg"
-                  alt="作品1"
+                  alt="2人で偵察"
                   class="portfolio-image" />
               </div>
-              <div class="portfolio-item">
+              <div class="portfolio-item hidden-item">
                 <img
                   src="/public/illusts/2.jpg"
-                  alt="作品1"
+                  alt="友人のイラスト化"
                   class="portfolio-image" />
               </div>
-              <div class="portfolio-item">
-                <img
-                  src="/public/illusts/1.jpg"
-                  alt="作品1"
-                  class="portfolio-image" />
-              </div>
-              <div class="portfolio-item">
-                <img
-                  src="/public/illusts/0.jpg"
-                  alt="作品1"
-                  class="portfolio-image" />
-              </div>
-              <!-- 他の画像アイテムも同様に -->
             </div>
-            <h3 class="h4 mb-4">Design</h3>
-            <div class="portfolio-grid">
-              <!-- 画像アイテム（例） -->
-              <div class="portfolio-item" style="aspect-ratio: 794/1123">
-                <img
-                  src="/public/design/5.svg"
-                  alt="作品1"
-                  class="portfolio-image" />
+            <div class="text-center mt-4">
+              <button id="loadMoreBtn" class="btn load-more-btn">
+                もっと見る
+              </button>
+            </div>
+
+            <!-- Design Section -->
+            <h3 class="h4 mb-4 mt-5">Design</h3>
+
+            <!-- Cool Category -->
+            <div class="design-category">
+              <h4 class="design-category-title">Cool</h4>
+              <span class="scroll-hint">
+                scroll
+                <span class="scroll-hint-icon">⟶</span>
+              </span>
+              <div class="design-grid">
+                <div class="portfolio-item" style="aspect-ratio: 794/1123">
+                  <img
+                    src="/public/design/5.svg"
+                    alt="Cool design 1"
+                    class="portfolio-image" />
+                </div>
+                <div class="portfolio-item" style="aspect-ratio: 794/1123">
+                  <img
+                    src="/public/design/4.svg"
+                    alt="Cool design 2"
+                    class="portfolio-image" />
+                </div>
+                <div class="portfolio-item" style="aspect-ratio: 794/1123">
+                  <img
+                    src="/public/design/3.svg"
+                    alt="Cool design 3"
+                    class="portfolio-image" />
+                </div>
+                <div class="portfolio-item" style="aspect-ratio: 794/1123">
+                  <img
+                    src="/public/design/5.svg"
+                    alt="Cool design 1"
+                    class="portfolio-image" />
+                </div>
+                <div class="portfolio-item" style="aspect-ratio: 794/1123">
+                  <img
+                    src="/public/design/4.svg"
+                    alt="Cool design 2"
+                    class="portfolio-image" />
+                </div>
+                <div class="portfolio-item" style="aspect-ratio: 794/1123">
+                  <img
+                    src="/public/design/3.svg"
+                    alt="Cool design 3"
+                    class="portfolio-image" />
+                </div>
               </div>
-              <div class="portfolio-item" style="aspect-ratio: 794/1123">
-                <img
-                  src="/public/design/4.svg"
-                  alt="作品1"
-                  class="portfolio-image" />
+            </div>
+
+            <!-- Cute Category -->
+            <div class="design-category">
+              <h4 class="design-category-title">Cute</h4>
+              <span class="scroll-hint">
+                scroll
+                <span class="scroll-hint-icon">⟶</span>
+              </span>
+              <div class="design-grid">
+                <div class="portfolio-item" style="aspect-ratio: 794/1123">
+                  <img
+                    src="/public/design/2.svg"
+                    alt="Cute design 1"
+                    class="portfolio-image" />
+                </div>
+                <div class="portfolio-item" style="aspect-ratio: 794/1123">
+                  <img
+                    src="/public/design/1.svg"
+                    alt="Cute design 2"
+                    class="portfolio-image" />
+                </div>
+                <div class="portfolio-item" style="aspect-ratio: 794/1123">
+                  <img
+                    src="/public/design/0.svg"
+                    alt="Cute design 3"
+                    class="portfolio-image" />
+                </div>
+                <div class="portfolio-item" style="aspect-ratio: 794/1123">
+                  <img
+                    src="/public/design/2.svg"
+                    alt="Cute design 1"
+                    class="portfolio-image" />
+                </div>
+                <div class="portfolio-item" style="aspect-ratio: 794/1123">
+                  <img
+                    src="/public/design/1.svg"
+                    alt="Cute design 2"
+                    class="portfolio-image" />
+                </div>
+                <div class="portfolio-item" style="aspect-ratio: 794/1123">
+                  <img
+                    src="/public/design/0.svg"
+                    alt="Cute design 3"
+                    class="portfolio-image" />
+                </div>
               </div>
-              <div class="portfolio-item" style="aspect-ratio: 794/1123">
-                <img
-                  src="/public/design/3.svg"
-                  alt="作品1"
-                  class="portfolio-image" />
-              </div>
-              <div class="portfolio-item" style="aspect-ratio: 794/1123">
-                <img
-                  src="/public/design/2.svg"
-                  alt="作品1"
-                  class="portfolio-image" />
-              </div>
-              <div class="portfolio-item" style="aspect-ratio: 794/1123">
-                <img
-                  src="/public/design/1.svg"
-                  alt="作品1"
-                  class="portfolio-image" />
-              </div>
-              <div class="portfolio-item" style="aspect-ratio: 794/1123">
-                <img
-                  src="/public/design/0.svg"
-                  alt="作品1"
-                  class="portfolio-image" />
-              </div>
-              <!-- 他の画像アイテムも同様に -->
             </div>
           </section>
 
-          <!-- モーダル -->
+          <!-- Modal -->
           <div class="modal-overlay" id="imageModal">
             <div class="modal-content">
               <button class="modal-close">&times;</button>
               <button class="modal-nav modal-prev">&lt;</button>
-              <img src="" alt="拡大画像" class="modal-image" />
+              <img src="" alt="" class="modal-image" />
               <button class="modal-nav modal-next">&gt;</button>
-              <!-- <div class="modal-social">
-                <button class="social-btn facebook">f</button>
-                <button class="social-btn twitter">X</button>
-                <button class="social-btn share">⇱</button>
-              </div> -->
+              <div class="modal-title"></div>
             </div>
           </div>
 
@@ -402,6 +460,7 @@
       document.addEventListener("DOMContentLoaded", function () {
         const modal = document.getElementById("imageModal");
         const modalImg = modal.querySelector(".modal-image");
+        const modalTitle = modal.querySelector(".modal-title");
         const closeBtn = modal.querySelector(".modal-close");
         const prevBtn = modal.querySelector(".modal-prev");
         const nextBtn = modal.querySelector(".modal-next");
@@ -412,14 +471,15 @@
         images.forEach((img, index) => {
           img.addEventListener("click", function () {
             currentIndex = index;
-            showModal(this.src);
+            showModal(this);
           });
         });
 
         // モーダルを表示
-        function showModal(src) {
+        function showModal(img) {
           modal.style.display = "flex";
-          modalImg.src = src;
+          modalImg.src = img.src;
+          modalTitle.textContent = img.alt; // タイトルを設定
           document.body.style.overflow = "hidden";
         }
 
@@ -433,27 +493,27 @@
         function showNext() {
           currentIndex = (currentIndex + 1) % images.length;
           modalImg.src = images[currentIndex].src;
+          modalTitle.textContent = images[currentIndex].alt; // タイトルを更新
         }
 
         // 前の画像を表示
         function showPrev() {
           currentIndex = (currentIndex - 1 + images.length) % images.length;
           modalImg.src = images[currentIndex].src;
+          modalTitle.textContent = images[currentIndex].alt; // タイトルを更新
         }
 
-        // イベントリスナー
+        // 以下は既存のイベントリスナーと同じ
         closeBtn.addEventListener("click", closeModal);
         prevBtn.addEventListener("click", showPrev);
         nextBtn.addEventListener("click", showNext);
 
-        // モーダル外クリックで閉じる
         modal.addEventListener("click", function (e) {
           if (e.target === modal) {
             closeModal();
           }
         });
 
-        // キーボード操作
         document.addEventListener("keydown", function (e) {
           if (modal.style.display === "flex") {
             if (e.key === "Escape") closeModal();
@@ -462,7 +522,6 @@
           }
         });
 
-        // タッチスワイプ対応
         let touchStartX = 0;
         let touchEndX = 0;
 
@@ -488,6 +547,79 @@
           }
         }
       });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const scrollContainers = document.querySelectorAll(
+          ".design-scroll-container"
+        );
+
+        scrollContainers.forEach((container) => {
+          const scrollGrid = container.querySelector(".design-grid");
+          const leftBtn = container.querySelector(".scroll-left");
+          const rightBtn = container.querySelector(".scroll-right");
+
+          // スクロール量の設定
+          const scrollAmount = 300; // 1回のスクロール量
+
+          leftBtn.addEventListener("click", () => {
+            scrollGrid.scrollBy({
+              left: -scrollAmount,
+              behavior: "smooth",
+            });
+          });
+
+          rightBtn.addEventListener("click", () => {
+            scrollGrid.scrollBy({
+              left: scrollAmount,
+              behavior: "smooth",
+            });
+          });
+
+          // スクロール位置に応じてボタンの表示/非表示を制御
+          scrollGrid.addEventListener("scroll", () => {
+            leftBtn.style.opacity = scrollGrid.scrollLeft > 0 ? "1" : "0.5";
+            rightBtn.style.opacity =
+              scrollGrid.scrollLeft <
+              scrollGrid.scrollWidth - scrollGrid.clientWidth
+                ? "1"
+                : "0.5";
+          });
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const loadMoreBtn = document.getElementById("loadMoreBtn");
+        const hiddenItems = document.querySelectorAll(".hidden-item");
+
+        loadMoreBtn.addEventListener("click", function () {
+          hiddenItems.forEach((item) => {
+            item.classList.remove("hidden-item");
+            // アニメーション効果を付ける
+            item.style.animation = "fadeIn 0.5s ease-in forwards";
+          });
+
+          // ボタンを非表示にする
+          loadMoreBtn.style.display = "none";
+        });
+      });
+
+      // CSSアニメーションの定義も追加
+      const style = document.createElement("style");
+      style.textContent = `
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+`;
+      document.head.appendChild(style);
     </script>
   </body>
 </html>
